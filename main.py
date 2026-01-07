@@ -19,7 +19,7 @@ def read_arduino():
         try:
             print("Attempting COM3 connection...")
             ser = serial.Serial('COM3', 115200, timeout=1)
-            print("✔ Arduino connected on COM3.")
+            print("Arduino connected on COM3.")
             
             while True:
                 try:
@@ -31,7 +31,7 @@ def read_arduino():
                     pass
 
         except Exception as e:
-            print("❌ Arduino COM3 error:", e)
+            print("Arduino COM3 error:", e)
             print("Retrying in 2 seconds...")
             time.sleep(2)
 
@@ -159,3 +159,4 @@ with pyvirtualcam.Camera(width=960, height=540, fps=30) as cam:
 
 cap.release()
 cv2.destroyAllWindows()
+
